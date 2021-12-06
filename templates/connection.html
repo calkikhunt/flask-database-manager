@@ -1,0 +1,27 @@
+<!-- {% block head %}
+<title>Flask Database Manager</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='scss/style.scss') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% endblock %} -->
+
+{% block body %}
+<section class="db-list">
+    <div class="title">
+        <h2><b>Please Provide Connection Info.</b></h2>
+    </div>
+    <div class="connection-info">
+        <form>
+            <label for="host">Database:</label><br>
+            <input type="text" id="database" name="database" value="{{ selected_db }}" readonly><br>
+            <label for="host">Host:</label><br>
+            <input type="text" id="host" name="host" required><br>
+            <label for="user">User:</label><br>
+            <input type="text" id="user" name="user" required><br>
+            <label for="passwd">Password:</label><br>
+            <input type="text" id="passwd" name="passwd" required><br><br>
+            <input type="button" id="connect" value="Connect">
+        </form> 
+    </div>
+</section>
+<!-- <script src="{{url_for('static', filename='js/script.js')}}"></script> -->
+{% endblock %}

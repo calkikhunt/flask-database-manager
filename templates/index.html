@@ -1,8 +1,25 @@
 {% block head %}
 <title>Flask Database Manager</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='scss/style.scss') }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 {% endblock %}
 
 {% block body %}
-
+<section class="main-section">
+    <div class="title">
+        <h2><b>Select Database</b></h2>
+    </div>
+    <div class="db-options">
+        <div class="db-mysql">
+            <a href="javascript:void(0)">MySql</a> 
+        </div>
+        <div class="db-mongodb">
+            <a href="javascript:void(0)">Mongodb</a>
+        </div>
+        <div class="db-cassandra">
+            <a href="javascript:void(0)">Cassandra</a>
+        </div>
+    </div>
+</section>
+<script src="{{url_for('static', filename='js/script.js')}}"></script>
 {% endblock %}
